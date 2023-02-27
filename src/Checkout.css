@@ -1,0 +1,57 @@
+body{
+  width: 100vw;
+  height: 100vh;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 80vw;
+  }
+  
+  .h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin: auto;
+    width: 80vw;
+  }
+  
+  .label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    margin-left: 70px;
+  }
+  
+  .input {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-left: 70px;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    width: 80%;
+  }
+  
+  .button {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #0070f3;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0062cc;
+  }
+  
+  .button:active {
+    background-color: #0051a8;
+  }
+  

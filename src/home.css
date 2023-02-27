@@ -1,0 +1,39 @@
+
+.home{
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_YmRVMwxsqyqLxQS-BzbQUhYjkqCU8SMsA&usqp=CAU") center center/cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1{
+    color:#fff;
+}
+.des{
+    background: url("https://cdn.shopify.com/s/files/1/0560/3249/3722/files/custom-grid-02-01-01_1400x.png?v=1667491039")center center/cover;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+}
+.des button{
+    height: 40px;
+    width: 200px;
+    background: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.5s;
+}
+.des button:hover{
+    background-color: #fff;
+    color: #333;
+}
+
