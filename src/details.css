@@ -1,0 +1,18 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.details{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.des-img{
+    width: 250px;
+    height: 250px;
+}
+.des-name{
+    text-align: center;
+}

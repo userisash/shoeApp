@@ -16,13 +16,25 @@ body{
     width: 100%;
     list-style: none;
 }
+.nav > ul > li{
+    height: 30px;
+    width: 100px;
+}
 .nav > ul > li > .link{
     text-decoration: none;
+    transition: all 1s;
+}
+
+.nav > ul > li > .link:hover{
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .card-container{
     width: 80%;
     margin: auto;
+}
+.card{
+    
     border: 3px solid #333;
 }
 

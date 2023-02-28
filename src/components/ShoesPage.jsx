@@ -4,6 +4,7 @@ import axios from 'axios';
 import ShoeDetailsPage from './Shoe';
 import DeleteButton from './DeleteCard';
 import CheckoutButton from './Checkoutnavi';
+import '../details.css'
 
 function ShoesPage() {
   const [shoes, setShoes] = useState([]);
@@ -154,16 +155,16 @@ function ShoesPage() {
           </button>
         </form>
       )}
-      <div className='shoe-card' style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div className='card-container'>
         {shoes.map((shoe) => (
           <div className='card'
             key={shoe.id}
-            style={{ width: '300px', margin: '20px' }}
+            style={{ width: '300px', margin: '20px', backgroundColor:'black' }}
           >
-            <img
+            <img className='img-display'
               src={shoe.img}
               alt={shoe.name}
-              style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+              // style={{ width: '100%', height: '200px', objectFit: 'cover'}}
             />
             <Link to={`/shoe/${shoe.id}`}>
             <button >Details</button></Link>
@@ -171,9 +172,7 @@ function ShoesPage() {
               <h2>{shoe.name}</h2>
               <p>{shoe.price}</p>
               <div className='btns'>
-              <DeleteButton shoeId={shoe.id} onDelete={handleDelete} />
               <CheckoutButton/>
-              <button className='up' onClick={() => setUpdateFormVisible(true)}>Update Shoe</button>
               </div>
               {updateFormVisible && (
   <form className='up-form' onSubmit={handleUpdateSubmit}>
