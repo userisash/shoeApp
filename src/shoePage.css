@@ -1,19 +1,11 @@
-.shoe-card{
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  margin-left: 60px;
-}
-.title{
-  margin-left: 450px;
-}
-.card{
-  background-color: antiquewhite;
-  display: flex;
+/* .products-dis > .card-container{
+  display: 'flex';
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
+  justify-content: center;
+  align-items: center;
+  width: '200px';
+  margin: '20px';
+} */
 .card button{
   height: 40px;
   width:80px;
@@ -51,7 +43,7 @@
   border: 1px solid #000;
   cursor: pointer;
   color: #333;
-  margin-left: 550px;
+  /* margin-left: 550px; */
   transition: all 0.5s;
 }
 

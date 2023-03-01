@@ -48,16 +48,16 @@ function Shoe() {
         <p>{shoe.description}</p>
        
       </div>
-       {showEditInputs ? (<>
-        <input className='inp' type='text' value={shoe.name} onChange={(e)=>setShoe({...shoe, name: e.target.value})}/>
-        <input className='inp' type='number' value={shoe.price} onChange={(e)=>setShoe({...shoe, price: e.target.value})}/>
-        <input className='inp' type='text' value={shoe.img} onChange={(e)=>setShoe({...shoe, img: e.target.value})}/>
-        <button className='con-btn' onClick={confirm}>confirm changes</button></>):(null)}
     </div>
     <div className='des-btns'>
       <button className='del-btn' onClick={handleDelete}>delete</button>
       <button className='edit-btn' onClick={handleEdit}>edit</button>
       </div>
+       {showEditInputs ? (<form className='edit-form'>
+        <input className='inp' type='text' value={shoe.name} onChange={(e)=>setShoe({...shoe, name: e.target.value})}/>
+        <input className='inp' type='number' value={shoe.price} onChange={(e)=>setShoe({...shoe, price: e.target.value})}/>
+        <input className='inp' type='text' value={shoe.img} onChange={(e)=>setShoe({...shoe, img: e.target.value})}/>
+        <button className='con-btn' onClick={confirm}>confirm changes</button></form>):(null)}
       </>
   );
 }

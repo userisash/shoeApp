@@ -16,3 +16,66 @@ body{
 .des-name{
     text-align: center;
 }
+.des-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.del-btn{
+    height: 40px;
+    width: 100px;
+    background: #f3713d ;
+    border: 1px solid #333;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.5s;
+}
+.del-btn:hover{
+   opacity: 0.7;
+    color: #000;
+}
+
+.edit-btn{
+    height: 40px;
+    width: 200px;
+    background: none;
+    background-color: #0070f3;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.5s;
+    position: relative;
+}
+.edit-btn:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    outline: none;
+}
+
+.edit-form > input{
+    width: 200px;
+    outline: crimson;
+}
+.edit-form > button{
+    height: 40px;
+    width: 200px;
+    background: none;
+    border: 1px solid #333;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.5s;
+}
+.edit-form > button:hover{
+    background-color: #333;
+    color: #fff;
+}

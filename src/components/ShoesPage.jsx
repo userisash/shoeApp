@@ -4,7 +4,7 @@ import axios from 'axios';
 import ShoeDetailsPage from './Shoe';
 import DeleteButton from './DeleteCard';
 import CheckoutButton from './Checkoutnavi';
-import '../details.css'
+
 
 function ShoesPage() {
   const [shoes, setShoes] = useState([]);
@@ -113,10 +113,11 @@ function ShoesPage() {
   }, [selectedShoeId, shoes]);
 
   return (
-    <div>
-
+    <div className='products-dis'>
+      <div className='hed-btn'>
       <h1 className='title'>Choose From The Best</h1>
        <button className='add-btn' onClick={() => setFormVisible(true)}>Add Shoe</button>
+       </div>
       {formVisible && (
         <form className='add' onSubmit={handleFormSubmit}>
           <label>
@@ -159,82 +160,24 @@ function ShoesPage() {
         {shoes.map((shoe) => (
           <div className='card'
             key={shoe.id}
-            style={{ width: '300px', margin: '20px', backgroundColor:'black' }}
-          >
+            >
             <img className='img-display'
               src={shoe.img}
               alt={shoe.name}
-              // style={{ width: '100%', height: '200px', objectFit: 'cover'}}
-            />
-            <Link to={`/shoe/${shoe.id}`}>
-            <button >Details</button></Link>
+              />
             <div style={{ padding: '10px' }}>
               <h2>{shoe.name}</h2>
               <p>{shoe.price}</p>
               <div className='btns'>
+            <Link to={`/shoe/${shoe.id}`}>
+            <button >Details</button></Link>
               <CheckoutButton/>
               </div>
-              {updateFormVisible && (
-  <form className='up-form' onSubmit={handleUpdateSubmit}>
-    <label>
-      Name:
-      <input
-        type="text"
-        name="name"
-        value={updatedData.name}
-        onChange={(event) =>
-          setUpdatedData({
-            ...updatedData,
-            [event.target.name]: event.target.value,
-          })
-        }
-      />
-    </label>
-    <br />
-    <label>
-      Price:
-      <input
-        type="text"
-        name="price"
-        value={updatedData.price}
-        onChange={(event) =>
-          setUpdatedData({
-            ...updatedData,
-            [event.target.name]: event.target.value,
-          })
-        }
-      />
-    </label>
-    <br />
-    <label>
-      Image URL:
-      <input
-        type="text"
-        name="img"
-        value={updatedData.img}
-        onChange={(event) =>
-          setUpdatedData({
-            ...updatedData,
-            [event.target.name]: event.target.value,
-          })
-        }
-      />
-    </label>
-    <br />
-    <div className='up-btns'>
-    <button type="submit">Update Shoe</button>
-    <button type="button" onClick={handleUpdateCancel}>
-      Cancel
-    </button>
-    </div>
-  </form>
-)}
-    </div>
-    </div>
-))}
-    </div>
-     
-    </div>
+          </div>
+      </div>  
+              ))}
+          </div>
+      </div>
     
     );
   }
